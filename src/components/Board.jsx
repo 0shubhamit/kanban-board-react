@@ -1,9 +1,13 @@
-import React from 'react'
+import Column from "./Column";
 
-const Board = () => {
+export default function Board({ state }) {
   return (
-    <div>Board</div>
-  )
+    <div className="flex gap-4 p-4 overflow-x-auto">
+      {state.columnOrder.map((colId) => {
+        const column = state.columns[colId];
+        const tasks = column.taskIds.map((tId) => state.tasks[tId]);
+        return <Column key={column.id} column={column} tasks={tasks} />;
+      })}
+    </div>
+  );
 }
-
-export default Board
