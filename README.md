@@ -38,5 +38,7 @@ http://localhost:5173
 
 
 👨‍💻 Author
-Shubham Singh
 
+Shubham Singh
+LinkedIn
+GitHub
